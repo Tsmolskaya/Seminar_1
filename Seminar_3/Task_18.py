@@ -18,7 +18,7 @@ while True:
         n = int(input("Введите количество элементов списка: "))
         a = int(input("К какому числу ищем самый близкий по величине элемент: "))
         break
-    except value_error:
+    except ValueError:
         print("Введите целое число, а не букву!")
 
 
