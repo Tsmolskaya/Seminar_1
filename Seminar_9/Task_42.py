@@ -10,8 +10,4 @@ print("------------------")
 # Задача 42: Узнать какая максимальная households в зоне минимального значения population
 
 print("------------------")
-print((file["households"].max()) & (file["population"].min()))
-print("\n")
-print("---------------Максимальная households в зоне минимального значения population------------------\n")
-print((file["households"].max()) & (file["population"].min()))
-print("\n")
+print(file[file['population'] < file['population'].quantile(.25)]['households'].max())
